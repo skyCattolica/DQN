@@ -1,0 +1,83 @@
+Instructions and Requirements to Run the Code
+
+Overview
+This project trains a Deep Q-Network (DQN) agent to optimize trading strategies for Apple Inc. (AAPL) stock. The training data includes historical stock prices from 2020 to 2023, while testing is conducted on data from 2024. The stock data was sourced using the Yahoo Finance API.
+
+Requirements
+
+Python Version: Python 3.8 or later
+
+Required Libraries:
+Install the following Python libraries using pip if not already installed:
+pip install torch matplotlib yfinance
+
+Files Included:
+
+training.ipynb: Notebook for training the DQN agent using Apple stock data from 2020 to 2023.
+
+testing.ipynb: Notebook for testing the trained DQN agent using Apple stock data from 2024.
+
+train_data.csv: Training data containing Apple stock prices from 2020 to 2023.
+
+test_data.csv: Testing data containing Apple stock prices from 2024.
+
+dqn_model.pth: Pre-trained model file generated after running training.ipynb.
+
+Data Source:
+The stock data is downloaded using Yahoo Finance API. Ensure internet access if re-downloading is required.
+
+Steps to Run the Code
+
+1. Training the Model
+
+Open training.ipynb in Jupyter Notebook.
+
+Ensure the file train_data.csv is in the same directory as the notebook.
+
+Run all cells sequentially to:
+
+Load the data.
+
+Train the DQN agent on the stock prices from 2020 to 2023.
+
+Save the trained model as dqn_model.pth.
+
+2. Testing the Model
+
+Open testing.ipynb in Jupyter Notebook.
+
+Ensure the files test_data.csv and dqn_model.pth are in the same directory as the notebook.
+
+Run all cells sequentially to:
+
+Load the trained model.
+
+Test the DQN agent on the stock prices from 2024.
+
+Visualize the rewards and total assets over the test steps.
+
+Data Details
+
+Training Data:
+
+File: train_data.csv
+
+Content: Apple stock prices from 2020-01-01 to 2023-12-31.
+
+Testing Data:
+
+File: test_data.csv
+
+Content: Apple stock prices from 2024-01-01 to the most recent available date.
+
+Data Columns:
+
+Open: Opening price of the stock.
+
+High: Highest price during the day.
+
+Low: Lowest price during the day.
+
+Close: Closing price of the stock.
+
+Volume: Number of shares traded during the day.
